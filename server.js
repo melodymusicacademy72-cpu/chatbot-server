@@ -4,7 +4,12 @@ require("dotenv").config();
 
 const app = express();
 
-app.use(cors());
+
+app.use(cors({
+  origin: 'https://melodymusicacademy.in'
+}));
+
+
 app.use(express.json());
 
 app.post("/chat", async (req, res) => {
